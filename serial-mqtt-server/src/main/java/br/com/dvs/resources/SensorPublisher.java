@@ -34,7 +34,7 @@ public class SensorPublisher implements Publisher {
 		// int nextInt = new Random().nextInt(100);
 		// String sensorData = String.valueOf(nextInt) + "°";
 		// System.out.println("Publishing " + sensorData);
-		controller.publish("/danyllo/sensor", sensorData);
+		controller.publish("/esri/sensor", "{ result: " + sensorData + "}");
 	}
 
 }

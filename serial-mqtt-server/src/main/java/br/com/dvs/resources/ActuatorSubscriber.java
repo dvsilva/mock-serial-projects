@@ -17,13 +17,13 @@ public class ActuatorSubscriber implements Subscriber {
 
 	public void start() {
 		//System.out.println("Subscribing");
-		controller.subscribe("/danyllo/actuator", (Subscriber) this);
+		controller.subscribe("/esri/actuator", (Subscriber) this);
 	}
 
 	public void executeCallback(String topic, String message) {
 		System.out.println("Message arrived on " + topic + ": " + message);
-		
-		if (topic.equalsIgnoreCase("/danyllo/actuator")) {
+
+		if (topic.equalsIgnoreCase("/esri/actuator")) {
 			Operations op = Operations.valueOf(message.toUpperCase());
 			System.out.println("Operations : " + op);
 			service.execute(op);

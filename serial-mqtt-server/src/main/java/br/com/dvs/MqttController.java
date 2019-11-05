@@ -11,7 +11,7 @@ import br.com.dvs.mqtt.Subscriber;
 
 public class MqttController implements MqttCallback {
 
-	private static final String SERVER = "tcp://localhost:1883";
+	private static final String SERVER = "tcp://test.mosquitto.org:1883";
 	
 	private Subscriber subscriber;
 	
